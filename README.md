@@ -1,6 +1,6 @@
 # Flower Recognition
 
-![Demo](https://raw.githubusercontent.com/Anshal55/ML-ProjectKart/Flower_identification/Flowers%20Recognition/Images/fd1.png)
+![Demo](https://raw.githubusercontent.com/Anshal55/Flower-Identification/main/Images/fd1.png)
 
 ### Acess at : https://flower-identification.herokuapp.com/
 
