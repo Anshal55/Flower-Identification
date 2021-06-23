@@ -15,7 +15,6 @@ app = Flask(__name__)
 
 #load model
 model = load_model("Model_flower_mobilenet.h5")
-print("Model Loaded!!")
 
 IMAGE_FOLDER = os.getcwd() + "/static"
 
