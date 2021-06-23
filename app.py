@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import os
 
-from keras.applications.densenet import preprocess_input
+from tensorflow import keras
 from keras.models import  load_model
 from keras.preprocessing.image import load_img,img_to_array
 
@@ -13,7 +13,7 @@ from flask import Flask, request , render_template
 app = Flask(__name__)
 
 #load model
-model = load_model("Model_flower_densenet.h5")
+model = load_model("Model_flower_mobilenet.h5")
 print("Model Loaded!!")
 
 IMAGE_FOLDER = os.getcwd() + "/static"
@@ -24,7 +24,7 @@ def predictImage(path):
     img = load_img(path,target_size=(224,224,3))
     img = img_to_array(img)
     img = np.expand_dims(img,axis=0)
-    img = preprocess_input(img)
+    img = keras.applications.mobilenet.preprocess_input(img)
 
     pred = model.predict(img)
     result = classes[np.argmax(pred)]
