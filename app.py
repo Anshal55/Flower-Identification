@@ -24,7 +24,7 @@ def predictImage(path):
     img = load_img(path,target_size=(224,224,3))
     img = img_to_array(img)
     img = np.expand_dims(img,axis=0)
-    img = keras.applications.mobilenet.preprocess_input(img)
+    #img = keras.applications.mobilenet.preprocess_input(img)
 
     pred = model.predict(img)
     result = classes[np.argmax(pred)]
