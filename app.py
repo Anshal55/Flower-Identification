@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 import os
+from PIL import Image
 
 from keras.applications.densenet import preprocess_input
 from keras.models import  load_model
