@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 import os
+from PIL import Image
 
 from tensorflow import keras
 from keras.models import  load_model
