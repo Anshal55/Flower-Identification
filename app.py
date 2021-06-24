@@ -14,14 +14,14 @@ from flask import Flask, request , render_template
 app = Flask(__name__)
 
 #load model
-model = load_model("Model_flower_mobilenet.h5")
+model = load_model("Model_small.h5")
 
 IMAGE_FOLDER = os.getcwd() + "/static"
 
 # function lo load image and predict
 def predictImage(path):
     classes = ['Daisy', 'Dandelion', 'Rose', 'Sunflower', 'Tulip']
-    img = load_img(path,target_size=(224,224,3))
+    img = load_img(path,target_size=(128,128,3))
     img = img_to_array(img)
     img = np.expand_dims(img,axis=0)
     img = keras.applications.mobilenet.preprocess_input(img)
